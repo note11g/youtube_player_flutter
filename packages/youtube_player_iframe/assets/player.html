@@ -180,7 +180,7 @@
               console.log("Youtube button clicked");
               sendMessage('YoutubeButtonTap', '');
             };
-            ytButtonCopy.href = "#";
+            ytButtonCopy.href = "javascript:void(0);";
             ytButtonCopy.style = ytButton.style + "display: inline-block;";
             ytButton.replaceWith(ytButtonCopy);
           }
