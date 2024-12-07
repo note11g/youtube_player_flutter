@@ -170,6 +170,16 @@
               sendMessage('FullscreenButtonPressed', '');
             };
           }
+
+          var ytButton = ytFrame.getElementByClassName("ytp-youtube-button ytp-button")[0];
+          
+          if (ytButton) {
+            var ytButtonCopy = ytButton.cloneNode(true);
+            ytButton.replaceWith(ytButtonCopy);
+            ytButtonCopy.onclick = function() {
+              sendMessage('', '');
+            };
+          }
         }
       }
     </script>
