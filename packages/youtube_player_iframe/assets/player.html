@@ -175,13 +175,12 @@
           console.log(ytButton);
 
           if (ytButton) {
-            var ytButtonCopy = ytFrame.createElement('button');
-            ytButtonCopy.className = ytButton.className;
-            ytButtonCopy.innerHTML = ytButton.innerHTML;
+            var ytButtonCopy = ytButton.cloneNode(true);
             ytButtonCopy.onclick = function() {
               console.log("Youtube button clicked");
               sendMessage('YoutubeButtonTap', '');
             };
+            ytButtonCopy.href = "#";
             ytButtonCopy.style = ytButton.style + "display: inline-block;";
             ytButton.replaceWith(ytButtonCopy);
           }
