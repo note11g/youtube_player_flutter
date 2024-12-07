@@ -175,11 +175,15 @@
           console.log(ytButton);
 
           if (ytButton) {
-            var ytButtonCopy = ytButton.cloneNode(true);
-            ytButton.replaceWith(ytButtonCopy);
+            var ytButtonCopy = ytFrame.createElement('button');
+            ytButtonCopy.className = ytButton.className;
+            ytButtonCopy.innerHTML = ytButton.innerHTML;
             ytButtonCopy.onclick = function() {
+              console.log("Youtube button clicked");
               sendMessage('YoutubeButtonTap', '');
             };
+            ytButtonCopy.style = ytButton.style + "display: inline-block;";
+            ytButton.replaceWith(ytButtonCopy);
           }
         }
       }
