@@ -19,7 +19,7 @@ class YoutubePlayerEventHandler {
       'FullscreenButtonPressed': onFullscreenButtonPressed,
       'VideoState': onVideoState,
       'AutoplayBlocked': onAutoplayBlocked,
-      '': on,
+      'YoutubeButtonTap': onYoutubeButtonTap,
     };
   }
 
@@ -115,7 +115,7 @@ class YoutubePlayerEventHandler {
     controller.toggleFullScreen();
   }
 
-  void on(Object? data) {
+  void onYoutubeButtonTap(Object? data) {
     controller.onYoutubeButtonTap?.call();
   }
 

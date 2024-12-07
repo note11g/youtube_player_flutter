@@ -174,10 +174,9 @@
           var ytButton = ytFrame.getElementsByClassName("ytp-youtube-button ytp-button")[0];
           
           if (ytButton) {
-            var ytButtonCopy = ytButton.cloneNode(true);
-            ytButton.replaceWith(ytButtonCopy);
-            ytButtonCopy.onclick = function() {
-              sendMessage('', '');
+            ytButton.onclick = function(e) {
+              e.preventDefault();
+              sendMessage('YoutubeButtonTap', '');
             };
           }
         }
