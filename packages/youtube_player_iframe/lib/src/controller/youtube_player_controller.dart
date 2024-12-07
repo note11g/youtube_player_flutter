@@ -604,11 +604,11 @@ class YoutubePlayerController implements YoutubePlayerIFrameAPI {
 
   VoidCallback? _onYoutubeButtonTap;
 
-  void setYoutubeButtonListener(VoidCallback callback) {
+  VoidCallback? get onYoutubeButtonTap => _onYoutubeButtonTap;
+
+  void setYoutubeButtonListener(VoidCallback? callback) {
     _onYoutubeButtonTap = callback;
   }
-
-  
 
   /// Sets the full screen listener.
   // ignore: use_setters_to_change_properties

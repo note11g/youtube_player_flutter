@@ -116,7 +116,7 @@ class YoutubePlayerEventHandler {
   }
 
   void on(Object? data) {
-    controller._onYoutubeButtonTap?.call();
+    controller.onYoutubeButtonTap?.call();
   }
 
   /// This event fires if an error occurs in the player.
